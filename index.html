@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheAbhiPatel - Loading</title>
+    <style>
+      :root {
+        --stroke: #ffffff;
+        --glow: #4fc3ff;
+        --bg1: #0b0f1a;
+        --bg2: #121a2e;
+        --cycle: 2s;
+        --visible: 0.55;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        background: radial-gradient(
+          120% 120% at 50% 35%,
+          var(--bg2) 0%,
+          var(--bg1) 60%,
+          #000 100%
+        );
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
+      .logo {
+        width: min(88vw, 820px);
+        height: auto;
+        overflow: visible;
+      }
+      .logo path {
+        fill: none;
+        stroke: var(--stroke);
+        stroke-width: 2;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        filter: drop-shadow(0 0 5px var(--glow));
+        stroke-dasharray: var(--dash);
+        animation: flow var(--cycle) linear infinite;
+        animation-delay: var(--delay, 0s);
+      }
+      @keyframes flow {
+        from {
+          stroke-dashoffset: 0;
+        }
+        to {
+          stroke-dashoffset: var(--len);
+        }
+      }
+      .label {
+        color: #6f7d99;
+        font-size: 13px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .dots {
+        display: inline-flex;
+        gap: 5px;
+      }
+      .dots i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #6f7d99;
+        animation: pulse 1.2s ease-in-out infinite;
+      }
+      .dots i:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .dots i:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.25;
+          transform: translateY(0);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(-3px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .logo path {
+          animation: none;
+          stroke-dasharray: none;
+        }
+        .dots i {
+          animation: none;
+          opacity: 0.7;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="logo" viewBox="0 0 1180 175" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M20.5859375 52.51953125H101.2109375V69.5703125H72.20703125V140.0H49.6484375V69.5703125H20.5859375Z"
+      />
+      <path
+        d="M114.87109375 52.51953125H137.4296875V85.859375H170.7109375V52.51953125H193.26953125V140.0H170.7109375V102.91015625H137.4296875V140.0H114.87109375Z"
+      />
+      <path
+        d="M217.30078125 52.51953125H278.1796875V69.5703125H239.859375V85.859375H275.89453125V102.91015625H239.859375V122.94921875H279.46875V140.0H217.30078125Z"
+      />
+      <path
+        d="M404.759375 124.0625H369.4859375L363.91953125 140.0H341.24375L373.64609375 52.51953125H400.540625L432.94296875 140.0H410.2671875ZM375.1109375 107.83203125H399.07578125L387.12265625 73.02734375Z"
+      />
+      <path
+        d="M481.58359375 86.38671875Q486.915625 86.38671875 489.66953125 84.04296875Q492.4234375 81.69921875 492.4234375 77.12890625Q492.4234375 72.6171875 489.66953125 70.244140625Q486.915625 67.87109375 481.58359375 67.87109375H469.103125V86.38671875ZM482.3453125 124.6484375Q489.1421875 124.6484375 492.569921875 121.77734375Q495.99765625 118.90625 495.99765625 113.10546875Q495.99765625 107.421875 492.59921875 104.580078125Q489.20078125 101.73828125 482.3453125 101.73828125H469.103125V124.6484375ZM503.321875 93.18359375Q510.5875 95.29296875 514.571875 100.9765625Q518.55625 106.66015625 518.55625 114.921875Q518.55625 127.578125 510.0015625 133.7890625Q501.446875 140.0 483.9859375 140.0H446.54453125V52.51953125H480.41171875Q498.634375 52.51953125 506.808203125 58.02734375Q514.98203125 63.53515625 514.98203125 75.6640625Q514.98203125 82.05078125 511.99375 86.533203125Q509.00546875 91.015625 503.321875 93.18359375Z"
+      />
+      <path
+        d="M540.009375 52.51953125H562.56796875V85.859375H595.84921875V52.51953125H618.4078125V140.0H595.84921875V102.91015625H562.56796875V140.0H540.009375Z"
+      />
+      <path d="M642.4390625 52.51953125H664.99765625V140.0H642.4390625Z" />
+      <path
+        d="M739.4875 52.51953125H776.92890625Q793.628125 52.51953125 802.563671875 59.931640625Q811.49921875 67.34375 811.49921875 81.0546875Q811.49921875 94.82421875 802.563671875 102.236328125Q793.628125 109.6484375 776.92890625 109.6484375H762.04609375V140.0H739.4875ZM762.04609375 68.8671875V93.30078125H774.5265625Q781.0890625 93.30078125 784.66328125 90.107421875Q788.2375 86.9140625 788.2375 81.0546875Q788.2375 75.1953125 784.66328125 72.03125Q781.0890625 68.8671875 774.5265625 68.8671875Z"
+      />
+      <path
+        d="M882.52265625 124.0625H847.24921875L841.6828125 140.0H819.00703125L851.409375 52.51953125H878.30390625L910.70625 140.0H888.03046875ZM852.87421875 107.83203125H876.8390625L864.8859375 73.02734375Z"
+      />
+      <path
+        d="M913.878125 52.51953125H994.503125V69.5703125H965.49921875V140.0H942.940625V69.5703125H913.878125Z"
+      />
+      <path
+        d="M1008.16328125 52.51953125H1069.0421875V69.5703125H1030.721875V85.859375H1066.75703125V102.91015625H1030.721875V122.94921875H1070.33125V140.0H1008.16328125Z"
+      />
+      <path
+        d="M1092.1359375 52.51953125H1114.69453125V122.94921875H1154.30390625V140.0H1092.1359375Z"
+      />
+    </svg>
+
+    <div class="label">
+      Initializing
+      <span class="dots"><i></i><i></i><i></i></span>
+    </div>
+
+    <script>
+      var visible =
+        parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            "--visible",
+          ),
+        ) || 0.55;
+
+      document.querySelectorAll(".logo path").forEach(function (p, i) {
+        var len = Math.ceil(p.getTotalLength());
+        var dash = len * visible;
+        var gap = len - dash;
+        p.style.setProperty("--len", len);
+        p.style.setProperty("--dash", dash + " " + gap);
+        p.style.setProperty("--delay", i * 0.09 + "s");
+      });
+    </script>
+  </body>
+</html>
